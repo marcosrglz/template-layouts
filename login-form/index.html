@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="login-card">
+      <form>
+        <h2>Login Form</h2>
+        <ul class="user-choice">
+          <li id="login-choice-word">
+            <button>Login</button>
+          </li>
+          <li id="signup-choice-word">
+            <button>Signup</button>
+          </li>
+        </ul>
+        <div class="user-info-containers">
+          <div class="field">
+            <input
+              type="text"
+              id="user-mail"
+              name="user-mail"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="field">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <!-- password text div -->
+          <div id="password-strength">
+          </div>
+          <div id="progress-bar">
+            <div id="progress-bar-bg">
+
+            </div>
+          </div>
+
+          <a class="link" href="#">Forgot password?</a>
+        </div>
+        <div id="accept-login-button">
+          <button>Login</button>
+        </div>
+        <p class="font-size-12 text-centered">
+          Not a member?
+          <a class="link" href="#"
+            ><span style="color: #f498bd"> Signup now</span></a
+          >
+        </p>
+      </form>
+    </div>
+
+    <script>
+      const el = document.getElementById("password");
+      el.addEventListener("input", function (event) {
+        const passValue = event.target.value;
+        const passLength = passValue.length;
+
+        const passProgressBar = document.getElementById("progress-bar")
+        passProgressBar.style.display = "block"
+        const passProgressBarBg = document.getElementById("progress-bar-bg")
+
+        let passMessage = "";
+
+        const fillProgressBar = 100-(passLength*10)
+        passProgressBarBg.style.width = `${fillProgressBar}%`
+        if(passLength == 0){
+          passMessage = ""
+          passProgressBar.style.display = "none"
+        } else if(passLength < 6) {
+          passMessage = "Débil"
+        } else if(passLength >= 6 && passLength < 10) {
+          passMessage = "Media"
+        } else {
+          passMessage = "Fuerte"
+        }
+        
+        const passChecker = document.getElementById("password-strength")
+        passChecker.textContent = passMessage
+
+      });
+
+      
+    </script>
+  </body>
+</html>
