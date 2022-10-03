@@ -1,0 +1,45 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(38, 38, 38);
+  color: white;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main-container table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+.main-container td {
+  border: 1px solid white;
+  text-align: center;
+  height: 150px;
+  width: 150px;
+} 
+
+.game-circle { 
+  height: 50px;
+  width: 50px;
+  content: url("assets/imgs/circle.png")
+}
+
+.game-x {
+  height: 50px;
+  width: 50px;
+  content: url("assets/imgs/x.png");
+}
