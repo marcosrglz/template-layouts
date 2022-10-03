@@ -12,6 +12,8 @@ let board = [
 
 const tbodyEl = document.querySelector("tbody")
 
+let currentPlayer = 2;
+
 function drawBoard(){
   let boardResult = [[]]
   tbodyEl.innerHTML = ""
@@ -26,7 +28,6 @@ function drawBoard(){
       if(board[i][j] == 0) {
         tdEl.textContent = ""
       } else if(board[i][j] == 1) {
-
         imgEl.setAttribute("class", "game-circle")
       } else if(board[i][j] == 2) {
         imgEl.setAttribute("class", "game-x")
@@ -42,8 +43,19 @@ document.getElementById("board-table").addEventListener("click", (event) => {
     const trIndex = Array.from(tbodyEl.children).indexOf(trEl)
 
     const tdIndex = Array.from(trEl.children).indexOf(event.target)
-    board[trIndex][tdIndex] = 1
+    if(board[trIndex][tdIndex] > 0) {
+      return
+    }
+    board[trIndex][tdIndex] = currentPlayer;
+
+    if(currentPlayer == 1){
+      currentPlayer = 2
+    } else {
+      currentPlayer = 1
+    }
+    
     drawBoard()
+    
   }
 })
 
