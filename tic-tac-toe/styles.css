@@ -26,16 +26,13 @@ h1 {
   margin-bottom: 100px;
 }
 
-#game-navbar {
+#game-stats {
   display: flex;
   justify-content: space-between;
+  color: white;
   gap: 0px;
   width: 50%;
   font-size: 20px;
-}
-
-#player-turn {
-  color: white;
 }
 
 .main-container {
@@ -83,4 +80,8 @@ h1 {
   font-size: 50px; 
   line-height: 100px;
   text-align: center;
+}
+
+#game-footer button {
+  margin-top: 50px;
 }

@@ -2,7 +2,7 @@ let board = [
   [0, 0, 0],
   [0, 0, 0],
   [0, 0, 0],
-];
+]
 
 let winner = false;
 let currentPlayer = 2;
@@ -74,6 +74,7 @@ function checkWinner() {
 }
 
 const tbodyEl = document.querySelector("tbody");
+const statsEl = document.querySelector("#game-stats")
 
 function drawBoard() {
   let boardResult = [[]];
@@ -96,6 +97,18 @@ function drawBoard() {
       tdEl.appendChild(pEL);
     }
   }
+
+  statsEl.innerHTML = ""
+  const playerLabel = currentPlayer == 1 ? "O" : "X"
+
+  const playerEl = document.createElement("p")
+  playerEl.textContent = "Turn: " + playerLabel
+  statsEl.appendChild(playerEl)
+
+  const movesEl = document.createElement("p")
+  movesEl.textContent = "Moves: " + movesCounter
+  statsEl.appendChild(movesEl)
+
 }
 
 document.getElementById("board-table").addEventListener("click", (event) => {
@@ -125,7 +138,6 @@ document.getElementById("board-table").addEventListener("click", (event) => {
 
     //Win check
     winner = checkWinner();
-    console.log(winner);
     if (winner > 0) {
       alert("Player " + currentPlayer + " Wins");
     }
@@ -134,6 +146,18 @@ document.getElementById("board-table").addEventListener("click", (event) => {
     }
   }
 });
+
+function resetBoard() {
+  board = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+  ]
+  currentPlayer = 2
+  movesCounter = 0
+  winner = false
+  drawBoard()
+}
 
 
 //Start game
