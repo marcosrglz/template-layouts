@@ -1,5 +1,6 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
 }
 
 body {
@@ -10,36 +11,76 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
+}
+
+.body-landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 100px;
+}
+
+#game-navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  width: 50%;
+  font-size: 20px;
+}
+
+#player-turn {
+  color: white;
 }
 
 .main-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.main-container table {
+#board-table {
   border-collapse: collapse;
   border-style: hidden;
 }
 
 .main-container td {
   border: 1px solid white;
-  text-align: center;
   height: 150px;
   width: 150px;
-} 
+}
 
-.game-circle { 
-  height: 50px;
+.game-circle {
+  text-align: center;
+  border-style: solid;
+  border-width: 6px;
+  border-radius: 50%;
+  border-color: rgb(101, 255, 101);
   width: 50px;
-  content: url("assets/imgs/circle.png")
+  height: 50px;
+  margin: auto;
 }
 
 .game-x {
-  height: 50px;
-  width: 50px;
-  content: url("assets/imgs/x.png");
+  margin: auto;
+  height: auto;
+  width: 62px;
+}
+
+.game-x:after {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "\274c";
+  font-size: 50px; 
+  line-height: 100px;
+  text-align: center;
 }
