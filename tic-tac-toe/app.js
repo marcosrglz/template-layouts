@@ -140,6 +140,7 @@ document.getElementById("board-table").addEventListener("click", (event) => {
     winner = checkWinner();
     if (winner > 0) {
       alert("Player " + currentPlayer + " Wins");
+      return
     }
     if (movesCounter == 9) {
       alert("Draw");
