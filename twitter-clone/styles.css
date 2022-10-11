@@ -148,14 +148,53 @@ body {
 .msg-window-header{
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0.5rem;
   border-bottom: 1px solid #9ecaed;
   height: 35px;
 }
 
+.msg-window-header-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#new-dm-button {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 1rem;
+  height: 35px;
+  width: 35px;
+  padding: 1.1rem;
+}
+
+#new-dm-button:hover {
+  background-color: rgb(24, 24, 24, 0.6);
+}
+
+#expand-messages-button {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 1rem;
+  height: 35px;
+  width: 35px;
+  padding: 1.1rem;
+}
+
+#expand-messages-button:hover {
+  background-color: rgb(24, 24, 24, 0.6);
+}
+
 .msg-window-body {
-
-
+  padding: 0.5rem;
   height: 300px;
 }
 
