@@ -16,7 +16,7 @@
     <div class="left-column">
       <div class="twitter-menu">
         <div class="ghost-home-icon">
-          <button class="menu-button" >
+          <button class="menu-button">
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-sharp fa-solid fa-ghost"></i>
             </div>
@@ -27,7 +27,7 @@
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-solid fa-house-user"></i>
             </div>
-              Home
+            <div class="menu-text">Home</div>
           </button>
         </div>
         <div cass="menu-explore">
@@ -35,7 +35,7 @@
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-sharp fa-solid fa-hashtag"></i>
             </div>
-            Explore
+            <div class="menu-text">Explore</div>
           </button>
         </div>
         <div cass="menu-notifications">
@@ -43,7 +43,7 @@
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-sharp fa-solid fa-bell"></i>
             </div>
-            Notifications
+            <div class="menu-text">Notifications</div>
           </button>
         </div>
         <div cass="menu-messages">
@@ -51,7 +51,7 @@
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-sharp fa-solid fa-envelope"></i>
             </div>
-            Messages
+            <div class="menu-text">Messages</div>
           </button>
         </div>
         <div cass="menu-bookmarks">
@@ -59,7 +59,7 @@
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-sharp fa-solid fa-book"></i>
             </div>
-            Bookmarks
+            <div class="menu-text">Bookmarks</div>
           </button>
         </div>
         <div cass="menu-lists">
@@ -67,15 +67,15 @@
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-solid fa-rectangle-list"></i>
             </div>
-            Lists
-          </button> 
+            <div class="menu-text">Lists</div>
+          </button>
         </div>
         <div cass="menu-profile">
           <button class="menu-button">
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-sharp fa-solid fa-user"></i>
             </div>
-            Profile
+            <div class="menu-text">Profile</div>
           </button>
         </div>
         <div cass="menu-more">
@@ -83,12 +83,13 @@
             <div class="button-icon">
               <i class="fa fa-fw fa-xl fa-sharp fa-solid fa-bars"></i>
             </div>
-            More
+            <div class="menu-text">More</div>
           </button>
         </div>
         <div cass="menu-tweet-button">
-          <button id="tweet-button" href="_blank">
-            Tweet
+          <button id="tweet-button" onclick="alert('twitted')">
+            <i class="fa fa-fw fa-solid fa-pen"></i>
+            <div class="tweet-button-text">Tweet</div>
           </button>
         </div>
       </div>
@@ -96,7 +97,7 @@
         <button id="current-account-button">
           <div id="current-account-column-left">
             <img id="profile-image" style="width: 40px; border-radius: 50%;"
-            src="https://imgs.search.brave.com/E1JjhutKaGNtM3PZvfQ2lvVpDFlQmyy_5XIHf5Y_414/rs:fit:640:640:1/g:ce/aHR0cHM6Ly82NC5t/ZWRpYS50dW1ibHIu/Y29tLzExMTMwYjQz/ZGVmMjU1NDMzNDFl/YjQ5NWRlZjEwNjFm/LzFhZTI2ZjNlZDYw/YWEzM2YtMzQvczY0/MHg5NjAvZjlkOTdm/NWMxNWNjNDI3YWQ3/MzQ5YmU4OTFhMmUy/YTFiMmEzOTE4NC5q/cGc">
+              src="https://imgs.search.brave.com/E1JjhutKaGNtM3PZvfQ2lvVpDFlQmyy_5XIHf5Y_414/rs:fit:640:640:1/g:ce/aHR0cHM6Ly82NC5t/ZWRpYS50dW1ibHIu/Y29tLzExMTMwYjQz/ZGVmMjU1NDMzNDFl/YjQ5NWRlZjEwNjFm/LzFhZTI2ZjNlZDYw/YWEzM2YtMzQvczY0/MHg5NjAvZjlkOTdm/NWMxNWNjNDI3YWQ3/MzQ5YmU4OTFhMmUy/YTFiMmEzOTE4NC5q/cGc">
           </div>
           <div id="current-account-column-right">
             <div id="account-nickname">
@@ -110,13 +111,20 @@
       </div>
     </div>
     <div class="middle-column">
-      2
+      <div class="middle-column-header">
+        <div id="middle-home">
+          Home
+        </div>
+        <div id="top-tweets">
+          Top tweets
+        </div>
+
+      </div>
     </div>
     <div class="right-column">
-      3
       <div class="search-bar">
         <input type="text" placeholder="Search Twitter">
-          <i class="fa fa-fw fa-sharp fa-solid fa-magnifying-glass" ></i>
+        <i class="fa fa-fw fa-sharp fa-solid fa-magnifying-glass"></i>
         </input>
       </div>
       <div class="trending-bar">
@@ -124,6 +132,14 @@
       </div>
       <div class="discover-people">
 
+      </div>
+    </div>
+    <div class="messages-window">
+      <div class="msg-window-header">
+        <h3>Messages</h3>
+      </div>
+      <div class="msg-window-body">
+        Body
       </div>
     </div>
   </div>
