@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="normalize.css">
   <script src="https://kit.fontawesome.com/97b7fc1a14.js" crossorigin="anonymous"></script>
-  <script src="app.js"></script>
   <title>Twitter Clone</title>
 </head>
 
@@ -135,23 +134,25 @@
 
       </div>
     </div>
-    <div class="messages-window">
-      <div class="msg-window-header">
+    <div class="chat-window">
+      <div class="chat-window-header">
         <h3>Messages</h3>
-        <div class="msg-window-header-options">
+        <div class="chat-header-options">
           <button id="new-dm-button">
             <i class="fa fa-fw fa-xl fa-solid fa-comment-medical"></i>
           </button>
-          <button id="expand-messages-button">
-            <i class="fa fa-fw fa-xl fa-solid fa-arrow-up"></i>
+          <button id="chat-button-status">
+            <i id="expand-icon" class="fa fa-fw fa-xl fa-solid fa-arrow-up"></i>
+            <i id="collapse-icon" class="fa fa-fw fa-xl fa-solid fa-arrow-down"></i>
           </button>
         </div>
       </div>
-      <div class="msg-window-body">
+      <div class="chat-window-body">
         Body
       </div>
     </div>
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>

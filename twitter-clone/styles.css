@@ -67,7 +67,7 @@ body {
 
 #tweet-button {
   color: white;
-  background-color: rgb(255, 136, 0);
+  background-color: #7856ff;
   border: none;
   width: 100%;
   padding: 10px;
@@ -105,13 +105,13 @@ body {
 
 .search-bar input {
   border-radius: 30px;
-  border: 1px solid rgb(255, 136, 0);
+  border: 1px solid #7856ff;
   padding: 10px 0 10px 40px;
   background-color: rgb(43, 43, 43);
 }
 
 .search-bar input:hover {
-  border-color: rgb(255, 136, 0);
+  border-color: #7856ff;
 }
 
 .search-bar i {
@@ -131,7 +131,7 @@ body {
 }
 
 /* Messages Window */
-.messages-window {
+.chat-window {
   position: fixed;
   bottom: 0;
   right: 1rem;
@@ -145,7 +145,7 @@ body {
   box-shadow: 0 0 4px #9ecaed;
 }
 
-.msg-window-header{
+.chat-window-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -154,7 +154,7 @@ body {
   height: 35px;
 }
 
-.msg-window-header-options {
+.chat-header-options {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +177,7 @@ body {
   background-color: rgb(24, 24, 24, 0.6);
 }
 
-#expand-messages-button {
+#chat-button-status {
   display: flex;
   justify-content: center;
   color: white;
@@ -189,15 +189,37 @@ body {
   padding: 1.1rem;
 }
 
-#expand-messages-button:hover {
+#chat-button-status:hover {
   background-color: rgb(24, 24, 24, 0.6);
 }
 
-.msg-window-body {
-  padding: 0.5rem;
-  height: 300px;
+.chat-window-body {
+  visibility: hidden;
+  padding: 0;
+  width: 0;
+  height: 0;
+  transition: all 0.5s ease-out 0s;
 }
 
+.chat-window #collapse-icon {
+  display: none;
+}
+
+.chat-window.expanded #expand-icon {
+  display: none;
+}
+
+.chat-window.expanded #collapse-icon {
+  display: block;
+}
+
+.chat-window.expanded .chat-window-body {
+  visibility: visible;
+  height: 300px;
+  width: auto;
+  padding: 0.5rem;
+  transition: all 0.5s ease-in 0s;
+}
 
 /* Responsive at 750px */
 
