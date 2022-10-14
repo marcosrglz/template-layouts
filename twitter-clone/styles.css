@@ -1,12 +1,35 @@
 body {
-  background-color: rgb(8, 8, 8);
+  --primary-color: #7856ff;
+  --website-color: black;
+  --iconstext-color: white;
+  --searchbar-color: #202327;
+  --placeholder-color: #6f7479;
+  --input-color: white;
+  --hover-color: rgb(24, 24, 24, 0.6);
+  --chat-border-color: #9ecaed;
+  --tweet-button-text: white;
+  --twitter-border-color: #2f3336;
+  --user-tag-color: rgba(220, 220, 220, 0.613);
+  background-color: var(--website-color);
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   justify-content: center;
   height: 100vh;
-} 
+}
+
+body.light-theme {
+  --primary-color: #1d9bf0;
+  --website-color: white;
+  --iconstext-color: black;
+  --searchbar-color: #eff3f4;
+  --input-color: black;
+  --chat-border-color: #eceeef;
+  --hover-color: #e7e7e8;
+  --user-tag-color: #657480;
+  --twitter-border-color: #eff3f4;
+}
 
 .main-container {
   color: white;
@@ -39,14 +62,14 @@ body {
   align-items: center;
   margin: 0;
   background: none;
-  color: white;
+  color: var(--iconstext-color);
   padding: 0.8rem 0.8rem;
   border: 0;
 }
 
 .menu-button:hover {
   cursor: pointer;
-  background-color: rgb(24, 24, 24, 0.6);
+  background-color: var(--hover-color);
   border-radius: 3rem;
 }
 
@@ -68,8 +91,8 @@ body {
 }
 
 #tweet-button {
-  color: white;
-  background-color: #7856ff;
+  color: var(--tweet-button-text);
+  background-color: var(--primary-color);
   border: none;
   width: 100%;
   padding: 10px;
@@ -78,7 +101,7 @@ body {
 }
 
 #current-account-button {
-  color: white;
+  color: var(--iconstext-color);
   border: 0;
   background: none;
   display: flex;
@@ -91,12 +114,15 @@ body {
 
 #current-account-button:hover {
   cursor: pointer;
-  background-color: rgb(24, 24, 24, 0.6);
+  background-color: var(--hover-color);
   border-radius: 3rem;
 }
 
-/* Middle Column */
-
+#account-name p {
+  color: var(--user-tag-color);
+  margin: 0; 
+  font-size: small;
+}
 
 /* Right Column  */
 
@@ -110,27 +136,31 @@ body {
 
 .search-bar input {
   border-radius: 30px;
-  border: 1px solid #7856ff;
+  border: none;
   padding: 10px 0 10px 40px;
-  background-color: rgb(43, 43, 43);
+  background-color: var(--searchbar-color);
 }
 
-.search-bar input:hover {
-  border-color: #7856ff;
+.search-bar input:focus {
+  color: var(--input-color);
 }
 
 .search-bar i {
   position: absolute;
   left: 15px;
-  top: 13px;
+  top: 12px;
+}
+
+.fa-magnifying-glass {
+  color: var(--placeholder-color);
 }
 
 .middle-column {
-  color: white;
+  color: var(--iconstext-color);
   display: flex;
-  justify-content: space-between;
-  border-left: 1px solid #2f3336;
-  border-right: 1px solid #2f3336;
+  flex-direction: column;
+  border-left: 1px solid var(--twitter-border-color);
+  border-right: 1px solid var(--twitter-border-color);
   flex-grow: 2;
   width: 100%;
 }
@@ -142,7 +172,7 @@ body {
   height: 53px;
   width: 100%;
   cursor: pointer;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--twitter-border-color);
 }
 
 #home-title {
@@ -151,16 +181,8 @@ body {
   font-weight: bold;
 }
 
-.header-home {
-
-}
-
-.top-tweets {
-
-}
-
 #top-tweets-button {
-  color: white;
+  color: var(--iconstext-color);
   background-color: transparent;
   border: 0;
   margin-right: 1rem;
@@ -171,7 +193,65 @@ body {
 }
 
 #top-tweets-button:hover {
-  background-color: rgb(24, 24, 24, 0.6);
+  background-color: var(--hover-color);
+}
+
+.tweetmaker-container {
+  display: flex;
+  padding: 0.5rem;
+  height: 120px;
+  border-bottom: 1px solid var(--twitter-border-color);
+}
+
+.tweetmaker-container .left-column {
+  height: 100%;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.tweetmaker-container .right-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#input-tweet {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  width: 100%;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+#input-tweet:focus {
+  color: var(--iconstext-color);
+  outline: none;
+}
+
+.tweetmaker-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.tweetmaker-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.tweetmaker-options #tweet-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px
 }
 
 /* Messages Window */
@@ -184,17 +264,18 @@ body {
   border-top: 1px solid;
   border-left: 1px solid;
   border-right: 1px solid;
-  border-color: #9ecaed;
+  border-color: var(--chat-border-color);
   border-radius: 1rem 1rem 0 0;
-  box-shadow: 0 0 4px #9ecaed;
+  box-shadow: 0 0 5px var(--chat-border-color);
 }
 
-.chat-window-header{
+.chat-window-header {
+  color: var(--iconstext-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  border-bottom: 1px solid #9ecaed;
+  border-bottom: 1px solid var(--chat-border-color);
   height: 35px;
 }
 
@@ -208,7 +289,7 @@ body {
 #new-dm-button {
   display: flex;
   justify-content: center;
-  color: white;
+  color: var(--iconstext-color);
   background-color: transparent;
   border-color: transparent;
   border-radius: 1rem;
@@ -218,13 +299,13 @@ body {
 }
 
 #new-dm-button:hover {
-  background-color: rgb(24, 24, 24, 0.6);
+  background-color: var(--hover-color);
 }
 
 #chat-button-status {
   display: flex;
   justify-content: center;
-  color: white;
+  color: var(--iconstext-color);
   background-color: transparent;
   border-color: transparent;
   border-radius: 1rem;
@@ -235,7 +316,7 @@ body {
 }
 
 #chat-button-status:hover {
-  background-color: rgb(24, 24, 24, 0.6);
+  background-color: var(--hover-color);
 }
 
 .chat-window-body {
@@ -247,6 +328,7 @@ body {
 }
 
 .chat-content {
+  color: var(--iconstext-color);
   visibility: hidden;
 }
 
@@ -261,19 +343,19 @@ body {
 
 @keyframes rotate180 {
   0% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-180deg)
+    transform: rotate(-180deg);
   }
 }
 
 @keyframes rotateBack {
   0% {
-    transform: rotate(-180deg)
+    transform: rotate(-180deg);
   }
   100% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 }
 
@@ -322,8 +404,8 @@ body {
     display: none;
   }
   #tweet-button {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
   }
   #tweet-button .fa-pen {
@@ -336,10 +418,23 @@ body {
   #current-account-column-right {
     display: none;
   }
+  .tweetmaker-options #tweet-button {
+    width: 80px;
+    border-radius: 3rem;
+  }
+  
 }
 
 @media screen and (max-width: 1100px) {
   .chat-window {
     display: none;
   }
+}
+
+/* Assets */
+#profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  content: url("assets/imgs/profileimage.jpg")
 }

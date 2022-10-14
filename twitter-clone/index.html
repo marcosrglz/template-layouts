@@ -96,33 +96,50 @@
       <div class="current-account-info">
         <button id="current-account-button">
           <div id="current-account-column-left">
-            <img id="profile-image" style="width: 40px; border-radius: 50%;"
-            src="assets/imgs/profileimage.jpg">
+            <img id="profile-image" src="assets/imgs/profileimage.jpg">
           </div>
           <div id="current-account-column-right">
             <div id="account-nickname">
               <p style="margin: 0;">Sazuha</p>
             </div>
             <div id="account-name">
-              <p style="color:rgba(220, 220, 220, 0.613); margin: 0; font-size: small;">@sazuhamh</p>
+              <p>@sazuhamh</p>
             </div>
           </div>
         </button>
       </div>
     </div>
     <div class="middle-column">
-      <div class="middle-column-header" onclick="location.href='https://twitter.com/home';">
+      <div class="middle-column-header" onclick="alert('Home')">
         <div id="header-home">
           <p id="home-title">Home</p>
         </div>
         <div id="top-tweets">
-          <button id="top-tweets-button" onclick="event.stopPropagation(); alert('Top Tweets')">
+          <button id="top-tweets-button">
             <i class="fa fa-fw  fa-solid fa-star"></i>
           </button>
         </div>
       </div>
-      <div class="middle-column-tweetmaker">
-
+      <div class="tweetmaker-container">
+        <div class="left-column">
+          <img id="profile-image">
+          <div></div>
+        </div>
+        <div class="right-column">
+          <input id="input-tweet" type="text" placeholder="What's happening?" />
+          <div class="tweetmaker-options">
+            <div class="tweetmaker-icons">
+              <i class="fa fa-fw fa-solid fa-video"></i>
+              <i class="fa fa-fw fa-solid fa-video"></i>
+              <i class="fa fa-fw fa-solid fa-video"></i>
+            </div>
+            <div>
+              <button id="tweet-button" onclick="alert('twitted')">
+                Tweet
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="middle-column-body">
 

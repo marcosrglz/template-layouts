@@ -9,3 +9,17 @@ chatButton.addEventListener("click", (event) => {
     classList.add("expanded")
   }
 });
+
+const bodyTag = document.body
+const themeButton = document.getElementById("top-tweets-button")
+
+themeButton.addEventListener("click", (e) => {
+  const bodyClassList = bodyTag.classList
+  if(bodyClassList.contains("light-theme")) {
+    bodyClassList.remove("light-theme")
+    e.stopPropagation()
+  } else {
+    bodyClassList.add("light-theme")
+    e.stopPropagation()
+  }
+})
