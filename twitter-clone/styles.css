@@ -120,7 +120,7 @@ body.light-theme {
 
 #account-name p {
   color: var(--user-tag-color);
-  margin: 0; 
+  margin: 0;
   font-size: small;
 }
 
@@ -251,7 +251,7 @@ body.light-theme {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px
+  width: 80px;
 }
 
 /* Messages Window */
@@ -422,7 +422,6 @@ body.light-theme {
     width: 80px;
     border-radius: 3rem;
   }
-  
 }
 
 @media screen and (max-width: 1100px) {
@@ -436,5 +435,5 @@ body.light-theme {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  content: url("assets/imgs/profileimage.jpg")
+  content: url("assets/imgs/profileimage.jpg");
 }

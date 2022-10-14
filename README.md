@@ -11,3 +11,7 @@
 href="https://htmlpreview.github.io/?https://github.com/marcosrglz/template-layouts/blob/main/tic-tac-toe/index.html">
 Test it</a>
 
+## Twitter Clone
+
+[![sample](/twitter-clone/assets/imgs/sample.png)](/twitter-clone/)</br>
+<a target="_blank" href="http://htmlpreview.github.io/?https://github.com/marcosrglz/template-layouts/blob/main/twitter-clone/index.html">Test it</a>

@@ -1,25 +1,25 @@
-const chatWindow = document.querySelector(".chat-window")
-const chatButton = document.getElementById("chat-button-status")
+const chatWindow = document.querySelector(".chat-window");
+const chatButton = document.getElementById("chat-button-status");
 
 chatButton.addEventListener("click", (event) => {
-  const classList = chatWindow.classList
-  if(classList.contains("expanded")){
-    classList.remove("expanded")
+  const classList = chatWindow.classList;
+  if (classList.contains("expanded")) {
+    classList.remove("expanded");
   } else {
-    classList.add("expanded")
+    classList.add("expanded");
   }
 });
 
-const bodyTag = document.body
-const themeButton = document.getElementById("top-tweets-button")
+const bodyTag = document.body;
+const themeButton = document.getElementById("top-tweets-button");
 
 themeButton.addEventListener("click", (e) => {
-  const bodyClassList = bodyTag.classList
-  if(bodyClassList.contains("light-theme")) {
-    bodyClassList.remove("light-theme")
-    e.stopPropagation()
+  const bodyClassList = bodyTag.classList;
+  if (bodyClassList.contains("light-theme")) {
+    bodyClassList.remove("light-theme");
+    e.stopPropagation();
   } else {
-    bodyClassList.add("light-theme")
-    e.stopPropagation()
+    bodyClassList.add("light-theme");
+    e.stopPropagation();
   }
-})
+});
