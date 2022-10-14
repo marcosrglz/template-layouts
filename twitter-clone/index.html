@@ -97,7 +97,7 @@
         <button id="current-account-button">
           <div id="current-account-column-left">
             <img id="profile-image" style="width: 40px; border-radius: 50%;"
-              src="https://imgs.search.brave.com/E1JjhutKaGNtM3PZvfQ2lvVpDFlQmyy_5XIHf5Y_414/rs:fit:640:640:1/g:ce/aHR0cHM6Ly82NC5t/ZWRpYS50dW1ibHIu/Y29tLzExMTMwYjQz/ZGVmMjU1NDMzNDFl/YjQ5NWRlZjEwNjFm/LzFhZTI2ZjNlZDYw/YWEzM2YtMzQvczY0/MHg5NjAvZjlkOTdm/NWMxNWNjNDI3YWQ3/MzQ5YmU4OTFhMmUy/YTFiMmEzOTE4NC5q/cGc">
+            src="assets/imgs/profileimage.jpg">
           </div>
           <div id="current-account-column-right">
             <div id="account-nickname">
@@ -111,13 +111,20 @@
       </div>
     </div>
     <div class="middle-column">
-      <div class="middle-column-header">
-        <div id="middle-home">
-          Home
+      <div class="middle-column-header" onclick="location.href='https://twitter.com/home';">
+        <div id="header-home">
+          <p id="home-title">Home</p>
         </div>
         <div id="top-tweets">
-          Top tweets
+          <button id="top-tweets-button" onclick="event.stopPropagation(); alert('Top Tweets')">
+            <i class="fa fa-fw  fa-solid fa-star"></i>
+          </button>
         </div>
+      </div>
+      <div class="middle-column-tweetmaker">
+
+      </div>
+      <div class="middle-column-body">
 
       </div>
     </div>
@@ -147,7 +154,9 @@
         </div>
       </div>
       <div class="chat-window-body">
-        Body
+        <div class="chat-content">
+          No messages
+        </div>
       </div>
     </div>
   </div>
