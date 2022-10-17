@@ -14,7 +14,8 @@ const bodyTag = document.body;
 const themeButton = document.getElementById("top-tweets-button");
 
 themeButton.addEventListener("click", (e) => {
-  const bodyClassList = bodyTag.classList;
+  let bodyClassList = bodyTag.classList;
+
   if (bodyClassList.contains("light-theme")) {
     bodyClassList.remove("light-theme");
     e.stopPropagation();
@@ -22,4 +23,8 @@ themeButton.addEventListener("click", (e) => {
     bodyClassList.add("light-theme");
     e.stopPropagation();
   }
+
+  localStorage.setItem("theme", bodyTag.classList || "");
 });
+
+bodyTag.setAttribute("class", localStorage.getItem("theme"));

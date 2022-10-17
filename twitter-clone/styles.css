@@ -9,7 +9,9 @@ body {
   --chat-border-color: #9ecaed;
   --tweet-button-text: white;
   --twitter-border-color: #2f3336;
-  --user-tag-color: rgba(220, 220, 220, 0.613);
+  --user-tag-color: #505357;
+  --post-interactions-color: #71767b;
+  --interactions-hover: #1d9aef;
   background-color: var(--website-color);
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -118,9 +120,8 @@ body.light-theme {
   border-radius: 3rem;
 }
 
-#account-name p {
+#account-tag {
   color: var(--user-tag-color);
-  margin: 0;
   font-size: small;
 }
 
@@ -154,6 +155,8 @@ body.light-theme {
 .fa-magnifying-glass {
   color: var(--placeholder-color);
 }
+
+/* Middle Column */
 
 .middle-column {
   color: var(--iconstext-color);
@@ -254,6 +257,105 @@ body.light-theme {
   width: 80px;
 }
 
+.post {
+  width: auto;
+  height: auto;
+  padding: 0.6rem 0.3rem 0.8rem 0.4rem;
+  border-bottom: 1px solid var(--twitter-border-color);
+  display: flex;
+}
+
+.post:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+.post-left-column {
+  margin-top: 0.8rem;
+  margin-left: 0.8rem;
+}
+
+.post-right-column {
+  margin-left: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.post-user p{
+  margin: 0;
+  font-size: 15px;
+}
+
+.post-content {
+  margin-right: 1rem;
+  max-width: 384px;
+}
+
+.post-content p {
+  margin-top: 0.3rem;
+  padding: 0;
+  font-size: 15px;
+
+}
+.post-interactions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: stretch;
+  max-width: 300px;
+  margin-left: -5px;
+}
+
+.p-label-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--post-interactions-color);
+}
+
+.p-label-with-icon:hover {
+  color: var(--interactions-hover);
+  cursor: pointer;
+}
+
+.p-label-with-icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-color: transparent;
+  border-radius: 3rem;
+}
+
+.p-label-with-icon i:hover {
+  display: flex;
+  border-radius: 3rem;
+  background-color: var(--hover-color);
+  width: 25px;
+  height: 25px;
+}
+
+.p-label-with-icon:hover i {
+  display: flex;
+  border-radius: 3rem;
+  background-color: var(--hover-color);
+  width: 25px;
+  height: 25px;
+}
+
+.p-label-with-icon p {
+  margin: 0;
+  font-size: 13px;
+}
 /* Messages Window */
 
 .chat-window {
