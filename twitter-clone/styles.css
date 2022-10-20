@@ -2,7 +2,7 @@ body {
   --primary-color: #7856ff;
   --website-color: black;
   --iconstext-color: white;
-  --searchbar-color: #202327;
+  --right-column-color: #202327;
   --placeholder-color: #6f7479;
   --input-color: white;
   --hover-color: rgb(24, 24, 24, 0.6);
@@ -25,7 +25,7 @@ body.light-theme {
   --primary-color: #1d9bf0;
   --website-color: white;
   --iconstext-color: black;
-  --searchbar-color: #eff3f4;
+  --right-column-color: #eff3f4;
   --input-color: black;
   --chat-border-color: #eceeef;
   --hover-color: #e7e7e8;
@@ -37,7 +37,7 @@ body.light-theme {
   color: white;
   display: flex;
   width: 100%;
-  max-width: 965px;
+  max-width: 1000px;
 }
 
 /* Left Column */
@@ -128,18 +128,26 @@ body.light-theme {
 /* Right Column  */
 
 .right-column {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
 }
 
 .search-bar {
   position: relative;
+  margin-bottom: 12px;
 }
 
 .search-bar input {
   border-radius: 30px;
   border: none;
-  padding: 10px 0 10px 40px;
-  background-color: var(--searchbar-color);
+  padding: 0;
+  width: 300px;
+  height: 44px;
+  padding-left: 50px;
+  background-color: var(--right-column-color);
 }
 
 .search-bar input:focus {
@@ -148,12 +156,19 @@ body.light-theme {
 
 .search-bar i {
   position: absolute;
-  left: 15px;
-  top: 12px;
+  left: 18px;
+  top: 15px;
 }
 
 .fa-magnifying-glass {
   color: var(--placeholder-color);
+}
+
+.trending-content {
+  width: 350px;
+  height: 630px;
+  background-color: var(--right-column-color);
+  border-radius: 1rem;
 }
 
 /* Middle Column */
@@ -164,7 +179,6 @@ body.light-theme {
   flex-direction: column;
   border-left: 1px solid var(--twitter-border-color);
   border-right: 1px solid var(--twitter-border-color);
-  flex-grow: 2;
   width: 100%;
 }
 
@@ -201,8 +215,10 @@ body.light-theme {
 
 .tweetmaker-container {
   display: flex;
+  width: auto;
   padding: 0.5rem;
   height: 120px;
+  box-sizing: border-box;
   border-bottom: 1px solid var(--twitter-border-color);
 }
 
@@ -239,7 +255,7 @@ body.light-theme {
 .tweetmaker-options {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  width: 100%;
 }
 
 .tweetmaker-icons {
@@ -258,11 +274,12 @@ body.light-theme {
 }
 
 .post {
-  width: auto;
+  width: 100%;
   height: auto;
   padding: 0.6rem 0.3rem 0.8rem 0.4rem;
   border-bottom: 1px solid var(--twitter-border-color);
   display: flex;
+  box-sizing: border-box;
 }
 
 .post:hover {
@@ -369,6 +386,7 @@ body.light-theme {
   border-color: var(--chat-border-color);
   border-radius: 1rem 1rem 0 0;
   box-shadow: 0 0 5px var(--chat-border-color);
+  background-color: var(--website-color);
 }
 
 .chat-window-header {
@@ -526,11 +544,31 @@ body.light-theme {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1108px) {
+  .search-bar input{
+    width: 240px;
+  }
+  .trending-content {
+    width: 288px;
+  }
   .chat-window {
     display: none;
   }
 }
+
+@media screen and (max-width: 950px) {
+  .right-column {
+    display: none;
+  }
+  .middle-column {
+    width: 550px;
+    margin-right: 20px;
+  }
+  .post-interactions {
+    gap: 5px;
+  }
+}
+
 
 /* Assets */
 #profile-image {
