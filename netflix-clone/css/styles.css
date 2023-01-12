@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: black;
+  /* Story Cards */
+  /* FaQ */
+}
+body .main-header {
+  background-image: url(https://handoff-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225.jpg);
+}
+body .main-header .header-wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: auto;
+}
+body .main-header .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+body .main-header .main-nav .nav-left-column #netflix-word-icon {
+  width: 10rem;
+}
+body .main-header .main-nav .nav-right-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+body .main-header .main-nav .nav-right-column .lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border: 1px solid white;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+body .main-header .main-nav .nav-right-column .login {
+  background-color: #e30914;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}
+body .main-header .header-content {
+  max-width: 59rem;
+  margin: auto;
+  padding: 10rem 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body .main-header .header-content h1 {
+  font-size: 3.8rem;
+  width: 40rem;
+  text-align: center;
+}
+body .main-header .header-content h2 {
+  font-weight: 500;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+body .main-header .header-content .mail-form {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body .main-header .header-content .mail-form label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1rem;
+}
+body .main-header .header-content .mail-form .mail-field {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+body .main-header .header-content .mail-form .mail-field #mail-input {
+  height: 4rem;
+  padding: 0 0.5rem;
+  width: 24rem;
+  border: none;
+}
+body .main-header .header-content .mail-form .mail-field #mail-input::-moz-placeholder {
+  font-size: 1rem;
+}
+body .main-header .header-content .mail-form .mail-field #mail-input:-ms-input-placeholder {
+  font-size: 1rem;
+}
+body .main-header .header-content .mail-form .mail-field #mail-input::placeholder {
+  font-size: 1rem;
+}
+body .main-header .header-content .mail-form .mail-field #main-subscription-submit {
+  height: 4rem;
+  border: 0;
+  padding: 0 2rem;
+  background-color: #e30914;
+  font-size: 1.8rem;
+}
+body .story-card-content {
+  padding: 70px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  max-width: 1100px;
+  margin: auto;
+}
+body .story-card-content .story-card-text {
+  height: 100%;
+  width: 52%;
+  padding-right: 3.2rem;
+  margin: auto;
+  max-width: 1200px;
+}
+body .story-card-content .story-card-text .story-card-title {
+  font-size: 3.2rem;
+}
+body .story-card-content .story-card-text .story-card-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+body .story-card-content .story-card-media {
+  display: flex;
+  align-items: center;
+}
+body .faq {
+  display: flex;
+  justify-content: center;
+}
+body .faq .faq-content {
+  max-width: 815px;
+  padding: 70px 45px;
+  width: 100%;
+}
+body .faq .faq-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+body .faq .faq-list .faq-list-item {
+  width: 100%;
+  font-size: 1.6rem;
+}
+body .faq .faq-list .faq-list-item .faq-question {
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  background-color: #303030;
+  border: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .faq .faq-list .faq-list-item .faq-answer {
+  margin-top: 1px;
+  padding: 1rem;
+  background-color: #303030;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+body .faq .faq-list .faq-list-item .closed {
+  display: none;
+}
+
+/* Generic */
+.gray-separator {
+  border-bottom: 8px solid #222;
+}
+
+.media-left {
+  flex-direction: row-reverse;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.has-centered-content {
+  display: flex;
+  justify-content: center;
+}
+
+.faq-card-cg {
+  background-color: red;
+  max-width: 800px;
+}/*# sourceMappingURL=styles.css.map */
